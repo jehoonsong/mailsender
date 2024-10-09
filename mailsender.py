@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
 def main():
     parser = argparse.ArgumentParser(description="Send an email from Colab")
     parser.add_argument("title", help="The subject of the email")
-    parser.add_argument("--text", default="Sent from Colab!", help="The body of the email")
+    parser.add_argument("--body", default="Sent from Colab!", help="The body of the email")
     args = parser.parse_args()
 
     # Set up the email details
@@ -21,7 +21,7 @@ def main():
         password = file.read().strip()
 
     # Create the email
-    msg = MIMEText(args.text)
+    msg = MIMEText(args.body)
     msg["Subject"] = args.title
     msg["From"] = sender
     msg["To"] = receiver
