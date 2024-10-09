@@ -10,10 +10,6 @@ def main():
     parser.add_argument("--text", default="This is an email sent from Colab!", help="The body of the email")
     args = parser.parse_args()
 
-    if sys.stdin.isatty() and args.text == "This is an email sent from Colab!":
-        parser.print_help()
-        sys.exit(1)
-
     # Set up the email details
     with open('/content/.user_email', 'r') as file:
         receiver = file.read().strip()
