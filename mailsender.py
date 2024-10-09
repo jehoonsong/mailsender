@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 def main():
     parser = argparse.ArgumentParser(description="Send an email from Colab")
     parser.add_argument("title", help="The subject of the email")
-    parser.add_argument("--text", default="This is an email sent from Colab!", help="The body of the email")
+    parser.add_argument("--text", default="Sent from Colab!", help="The body of the email")
     args = parser.parse_args()
 
     # Set up the email details
