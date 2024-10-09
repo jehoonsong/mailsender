@@ -24,7 +24,7 @@ def main():
         password = file.read().strip()
 
     # Create the email
-    msg = MIMEText(args.text)
+    msg = MIMEText(args.text if args.text else "This is an email sent from Colab!")
     msg["Subject"] = args.title
     msg["From"] = sender
     msg["To"] = receiver
