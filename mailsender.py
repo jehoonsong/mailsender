@@ -12,12 +12,12 @@ def main():
     args = parser.parse_args()
 
     # Set up the email details
-    with open('/content/.user_email', 'r') as file:
+    with open('/content/.config/user_email', 'r') as file:
         receiver = file.read().strip()
 
     sender = receiver
 
-    with open('/content/.gmail_app_password', 'r') as file:
+    with open('/content/.config/gmail_app_password', 'r') as file:
         password = file.read().strip()
 
     # Create the email
